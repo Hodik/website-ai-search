@@ -1,0 +1,6 @@
+llama-index==0.10.15
+unstructured==0.12.5
+fastapi==0.110.0
+llama-index-readers-file
+
+validators==0.22.0

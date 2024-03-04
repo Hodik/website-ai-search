@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "My Search Extension",
+    "version": "1.0",
+    "description": "Sends search query and current page HTML to your server",
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "scripting"
+    ],
+    "host_permissions": [
+        "http://localhost/*"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
