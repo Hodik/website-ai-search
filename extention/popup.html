@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lightweight AI Search</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            height: 100vh;
+            min-height: 100vh;
+        }
+
+        /* Search container styles */
+        .search-container {
+            display: flex;
+            align-items: center;
+            width: 400px;
+            /* Adjust width as desired */
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #f5f5f5;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Input field styles */
+        #searchQuery {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            outline: none;
+            box-shadow: none;
+            /* Remove default shadow */
+        }
+
+        #searchQuery:focus {
+            border-color: #999;
+        }
+
+        /* Button styles */
+        #searchButton {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #276799;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 10px;
+            /* Add margin between input and button */
+        }
+
+        #searchButton:hover {
+            background-color: #337ab7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search-container">
+        <input type="text" id="searchQuery" placeholder="Enter your search query" autofocus>
+        <button id="searchButton">Search</button>
+    </div>
+    <div id="searchResults"></div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

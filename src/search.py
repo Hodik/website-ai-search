@@ -13,8 +13,8 @@ Settings.tokenizer = AutoTokenizer.from_pretrained("NousResearch/Llama-2-7b-chat
 Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
 
 
-def search(url: str, query: str) -> list[NodeWithScore]:
-    documents = HTMLReader().load_data(url=url, split_documents=True)
+def search(url: str, html: str, query: str) -> list[NodeWithScore]:
+    documents = HTMLReader().load_data(html=html, url=url, split_documents=True)
     index = VectorStoreIndex.from_documents(
         documents,
     )
