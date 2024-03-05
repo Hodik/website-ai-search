@@ -26,7 +26,7 @@ def search(url: str, html: str, query: str) -> list[NodeWithScore]:
     )
 
     retrieved_documents = retriever.retrieve(query)
-
+    print(f"Retrieved {retrieved_documents} documents")
     for i, document in enumerate(retrieved_documents):
         original_text = document.get_text()
         print(f"{i=}, {document.score=}, {original_text=}")

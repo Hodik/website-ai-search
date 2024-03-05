@@ -26,22 +26,14 @@ class HTMLReader(BaseReader):
         split_documents: Optional[bool] = True,
     ) -> List[Document]:
 
-        if html:
-            elements = partition_html(
-                text=html,
-                include_page_breaks=False,
-                encoding=None,
-                languages=None,
-                detect_language_per_element=False,
-            )
-        elif url:
-            elements = partition_html(
-                url=url,
-                include_page_breaks=False,
-                encoding=None,
-                languages=None,
-                detect_language_per_element=False,
-            )
+        elements = partition_html(
+            url=url,
+            text=html,
+            include_page_breaks=False,
+            encoding=None,
+            languages=None,
+            detect_language_per_element=False,
+        )
         docs = []
         if split_documents:
             for node in elements:
